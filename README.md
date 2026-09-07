@@ -20,4 +20,4 @@ Clone the repo and open `index.html` in your browser. For best results, use a lo
 
 ---
 
-Made by GameFlowPlayz
+Made by Gameflowplayz
