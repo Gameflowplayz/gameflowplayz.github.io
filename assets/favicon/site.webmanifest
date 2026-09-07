@@ -1,6 +1,7 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Gameflowplayz",
+  "short_name": "G-Flow",
+  "display": "browser",
   "icons": [
     {
       "src": "/assets/favicon/web-app-manifest-192x192.png",
