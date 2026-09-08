@@ -150,6 +150,42 @@
       border-color: #22c55e;
     }
 
+    .support-group {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+.kofi-btn, .discord-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #fff;
+  transition: 0.25s;
+}
+.kofi-btn {
+  background: linear-gradient(135deg, #13C3FD 0%, #E84D8A 100%);
+  box-shadow: 0 4px 16px rgba(232, 77, 138, 0.3);
+}
+.kofi-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 28px rgba(232, 77, 138, 0.5);
+}
+.discord-btn {
+  background: #5865F2;
+  box-shadow: 0 4px 16px rgba(88, 101, 242, 0.3);
+}
+.discord-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 28px rgba(88, 101, 242, 0.5);
+}
+
     /* ----- FOOTER ----- */
     .footer {
       margin-top: 56px;
@@ -271,6 +307,11 @@
     <div class="button-group">
       <a class="dl-btn curse" href="https://www.curseforge.com/minecraft-bedrock/texture-packs/g-flow-visuals" target="_blank">Download on CurseForge</a>
       <a class="dl-btn mcpedl" href="https://mcpedl.com/g-flow-visuals/" target="_blank">Download on MCPEDL</a>
+    </div>
+
+    <div class="support-group">
+      <a class="kofi-btn" href="https://ko-fi.com/gameflowplayz" target="_blank">❤️ Support me on Ko-fi</a>
+      <a class="discord-btn" href="https://discord.gg/z7CAGHK6VY" target="_blank">💬 Join Discord</a>
     </div>
 
     <!-- ===== FOOTER ===== -->
