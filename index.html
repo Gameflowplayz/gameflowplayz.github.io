@@ -6,12 +6,12 @@
   <title>Gameflowplayz – Minecraft Bedrock Visual Packs</title>
   <meta name="description" content="Gameflowplayz creates polished Minecraft Bedrock visual packs including shaders, UI, PvP, and X-ray tools. Download on CurseForge and MCPEDL." />
   <link rel="icon" href="assets/favicon.ico" />
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
-  <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon/favicon-48x48.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png" />
-  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png" />
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
@@ -125,12 +125,154 @@
       animation: fadeUp 0.8s ease both;
     }
 
+    /* ----- CAROUSEL (BANNER SLIDER) ----- */
+    .carousel-container {
+      position: relative;
+      margin: 32px 0 8px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      animation: fadeUp 0.9s ease both;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      will-change: transform;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      cursor: pointer;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      max-height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ----- CAROUSEL DOTS ----- */
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 16px 0 8px;
+    }
+
+    .carousel-dots button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: 0.3s;
+      padding: 0;
+    }
+
+    .carousel-dots button.active {
+      background: #8b5cf6;
+      width: 28px;
+      border-radius: 6px;
+    }
+
+    .carousel-dots button:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    /* ----- DISCORD INVITE SECTION (below carousel) ----- */
+    .discord-invite {
+      background: rgba(88, 101, 242, 0.12);
+      border: 1px solid rgba(88, 101, 242, 0.25);
+      border-radius: 40px;
+      padding: 14px 28px;
+      margin: 20px 0 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      animation: fadeUp 1s ease both;
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+    }
+
+    .discord-invite span {
+      color: #b0b0c0;
+      font-size: 0.95rem;
+    }
+
+    .discord-invite strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .discord-invite a {
+      background: #5865F2;
+      color: #fff;
+      padding: 8px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: 0.2s;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .discord-invite a:hover {
+      background: #4752c4;
+      transform: scale(1.02);
+    }
+
+    /* ----- KO-FI BUTTON ----- */
+    .kofi-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 18px 0 32px;
+      animation: fadeUp 1s ease both;
+    }
+
+    .kofi-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: linear-gradient(135deg, #13C3FD 0%, #E84D8A 100%);
+      padding: 16px 44px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #fff;
+      box-shadow: 0 4px 24px rgba(232, 77, 138, 0.35);
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+    }
+
+    .kofi-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 40px rgba(232, 77, 138, 0.5);
+    }
+
+    .kofi-btn:active {
+      transform: scale(0.96);
+    }
+
+    .kofi-btn .heart {
+      font-size: 1.6rem;
+      line-height: 1;
+      filter: drop-shadow(0 0 6px rgba(255,255,255,0.3));
+    }
+
     /* ----- SECTION TITLE ----- */
     .section-title {
       font-size: 1.1rem;
       font-weight: 600;
       color: #a8a8b8;
-      margin: 48px 0 20px;
+      margin: 8px 0 20px;
       letter-spacing: 0.2px;
       text-transform: uppercase;
     }
@@ -161,13 +303,11 @@
       animation: fadeUp 0.6s ease forwards;
     }
 
-    /* Staggered animation delay for each card */
     .project-card:nth-child(1) { animation-delay: 0.1s; }
     .project-card:nth-child(2) { animation-delay: 0.2s; }
     .project-card:nth-child(3) { animation-delay: 0.3s; }
     .project-card:nth-child(4) { animation-delay: 0.4s; }
 
-    /* Scroll-triggered animation via Intersection Observer */
     .project-card.visible {
       opacity: 1;
       transform: translateY(0);
@@ -361,6 +501,28 @@
         font-size: 0.9rem;
         padding-left: 14px;
       }
+      .carousel-slide img {
+        max-height: 160px;
+      }
+      .discord-invite {
+        padding: 12px 16px;
+        gap: 12px;
+        flex-direction: column;
+        text-align: center;
+        border-radius: 28px;
+      }
+      .discord-invite a {
+        padding: 6px 20px;
+        font-size: 0.85rem;
+      }
+      .kofi-btn {
+        padding: 14px 28px;
+        font-size: 1rem;
+        gap: 10px;
+      }
+      .kofi-btn .heart {
+        font-size: 1.3rem;
+      }
       .project-grid {
         grid-template-columns: 1fr;
       }
@@ -400,6 +562,51 @@
       Creating polished Minecraft Bedrock projects with a Vanilla+ feel. Focused on visuals, UI, performance, and creative ideas.
     </div>
 
+    <!-- ===== CAROUSEL ===== -->
+    <div class="carousel-container">
+      <div class="carousel-track" id="carouselTrack">
+
+        <!-- Slide 1: Visuals -->
+        <div class="carousel-slide" data-url="projects/g-flow-visuals.html">
+          <img src="assets/banners/g-flow-visuals_banner.png" alt="G-Flow Visuals" />
+        </div>
+
+        <!-- Slide 2: Dark UI -->
+        <div class="carousel-slide" data-url="projects/g-flow-dark-ui.html">
+          <img src="assets/banners/g-flow-dark-ui_banner.png" alt="G-Flow Dark UI" style="object-position: center 15%;" />
+        </div>
+
+        <!-- Slide 3: PvP -->
+        <div class="carousel-slide" data-url="projects/g-flow-pvp.html">
+          <img src="assets/banners/g-flow-pvp-banner.png" alt="G-Flow PvP" />
+        </div>
+
+        <!-- Slide 4: Xray -->
+        <div class="carousel-slide" data-url="projects/g-flow-xray.html">
+          <img src="assets/banners/g-flow-xray_banner.png" alt="G-Flow Xray" />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== CAROUSEL DOTS ===== -->
+    <div class="carousel-dots" id="carouselDots"></div>
+
+    <!-- ===== DISCORD INVITE (separate, not floating) ===== -->
+    <div class="discord-invite">
+      <span>💬 <strong>Join our Discord</strong> — community, updates &amp; support</span>
+      <a href="https://discord.gg/z7CAGHK6VY" target="_blank">Join now</a>
+    </div>
+
+    <!-- ===== KO-FI BUTTON ===== -->
+    <div class="kofi-wrapper">
+      <a class="kofi-btn" href="https://ko-fi.com/gameflowplayz" target="_blank" rel="noopener noreferrer">
+        <span class="heart">❤️</span>
+        Support me on Ko-fi
+        <span style="font-weight:400;opacity:0.8;font-size:0.85rem;">— buy me a Diamond</span>
+      </a>
+    </div>
+
     <!-- ===== PROJECTS ===== -->
     <div class="section-title">Projects</div>
 
@@ -421,7 +628,6 @@
       <!-- G-Flow Dark UI -->
       <a href="projects/g-flow-dark-ui.html" class="project-card">
         <div class="top">
-          <img class="icon-img" src="assets/g-flow-dark-ui_icon.jpeg" alt="G-Flow Dark UI icon" />
           <span class="name">G-Flow Dark UI</span>
         </div>
         <div class="desc">Clean, dark-themed interface — modern UI without losing the vanilla feel.</div>
@@ -475,25 +681,75 @@
   </div>
 
   <script>
-    // Scroll-triggered animation using Intersection Observer
-    document.addEventListener('DOMContentLoaded', function() {
-      const cards = document.querySelectorAll('.project-card');
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -20px 0px'
+    (function() {
+      const track = document.getElementById('carouselTrack');
+      const dotsContainer = document.getElementById('carouselDots');
+      const slides = track.querySelectorAll('.carousel-slide');
+      const totalSlides = slides.length;
+      let currentIndex = 0;
+      let autoplayInterval = null;
+      const AUTOPLAY_DELAY = 4000; // 4 seconds
+
+      // --- Create dots ---
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
       });
 
-      cards.forEach(card => {
-        observer.observe(card);
+      const dots = dotsContainer.querySelectorAll('button');
+
+      // --- Go to slide ---
+      function goToSlide(index) {
+        if (index === currentIndex) return;
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+        currentIndex = index;
+      }
+
+      // --- Next slide (for autoplay) ---
+      function nextSlide() {
+        goToSlide((currentIndex + 1) % totalSlides);
+      }
+
+      // --- Start / stop autoplay ---
+      function startAutoplay() {
+        if (autoplayInterval) clearInterval(autoplayInterval);
+        autoplayInterval = setInterval(nextSlide, AUTOPLAY_DELAY);
+      }
+
+      function stopAutoplay() {
+        if (autoplayInterval) {
+          clearInterval(autoplayInterval);
+          autoplayInterval = null;
+        }
+      }
+
+      // --- Click on slide → open project page ---
+      slides.forEach(slide => {
+        slide.addEventListener('click', function() {
+          const url = this.dataset.url;
+          if (url) {
+            window.location.href = url;
+          }
+        });
       });
-    });
+
+      // --- Pause on hover ---
+      const carouselContainer = document.querySelector('.carousel-container');
+      carouselContainer.addEventListener('mouseenter', stopAutoplay);
+      carouselContainer.addEventListener('mouseleave', startAutoplay);
+
+      // --- Start the show ---
+      startAutoplay();
+    })();
   </script>
 
 </body>
