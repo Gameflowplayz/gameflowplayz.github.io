@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gameflowplayz – Minecraft Bedrock Visual Packs</title>
-  <meta name="description" content="Gameflowplayz creates polished Minecraft Bedrock visual packs including shaders, UI, PvP, and X-ray tools. Download on CurseForge and MCPEDL." />
+  <meta name="description" content="Gameflowplayz creates polished Minecraft Bedrock visual packs including shaders, UI, PvP, X-ray, and armour. Download on CurseForge and MCPEDL." />
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
   <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon/favicon-48x48.png" />
@@ -182,7 +182,7 @@
       background: rgba(255, 255, 255, 0.4);
     }
 
-    /* ----- DISCORD INVITE SECTION (below carousel) ----- */
+    /* ----- DISCORD INVITE SECTION ----- */
     .discord-invite {
       background: rgba(88, 101, 242, 0.12);
       border: 1px solid rgba(88, 101, 242, 0.25);
@@ -307,6 +307,7 @@
     .project-card:nth-child(2) { animation-delay: 0.2s; }
     .project-card:nth-child(3) { animation-delay: 0.3s; }
     .project-card:nth-child(4) { animation-delay: 0.4s; }
+    .project-card:nth-child(5) { animation-delay: 0.5s; }
 
     .project-card.visible {
       opacity: 1;
@@ -551,7 +552,7 @@
           <span class="profile-badge">Creator</span>
         </div>
         <div class="profile-stats">
-          <div><strong>4</strong> Projects</div>
+          <div><strong>5</strong> Projects</div>
           <div><strong>100K+</strong> Downloads</div>
         </div>
       </div>
@@ -586,13 +587,18 @@
           <img src="assets/banners/g-flow-xray_banner.png" alt="G-Flow Xray" />
         </div>
 
+        <!-- Slide 5: Armour -->
+        <div class="carousel-slide" data-url="projects/g-flow-armour.html">
+          <img src="assets/banners/g-flow-armour_banner.png" alt="G-Flow Armour" />
+        </div>
+
       </div>
     </div>
 
     <!-- ===== CAROUSEL DOTS ===== -->
     <div class="carousel-dots" id="carouselDots"></div>
 
-    <!-- ===== DISCORD INVITE (separate, not floating) ===== -->
+    <!-- ===== DISCORD INVITE ===== -->
     <div class="discord-invite">
       <span>💬 <strong>Join our Discord</strong> — community, updates &amp; support</span>
       <a href="https://discord.gg/z7CAGHK6VY" target="_blank">Join now</a>
@@ -658,6 +664,19 @@
           <span class="name">G-Flow Xray</span>
         </div>
         <div class="desc">Mining helper — hides stone, highlights ores with outlines. Achievements safe.</div>
+        <div class="links">
+          <span class="curse" style="pointer-events:none;background:rgba(249,115,22,0.08);">CurseForge</span>
+          <span class="mcpedl" style="pointer-events:none;background:rgba(34,197,94,0.06);">MCPEDL</span>
+        </div>
+      </a>
+
+      <!-- G-Flow Armour -->
+      <a href="projects/g-flow-armour.html" class="project-card">
+        <div class="top">
+          <img class="icon-img" src="assets/g-flow-armour_icon.png" alt="G-Flow Armour icon" />
+          <span class="name">G-Flow Armour</span>
+        </div>
+        <div class="desc">Modern, premium armour overhaul with glowing energy lines and high-tech designs.</div>
         <div class="links">
           <span class="curse" style="pointer-events:none;background:rgba(249,115,22,0.08);">CurseForge</span>
           <span class="mcpedl" style="pointer-events:none;background:rgba(34,197,94,0.06);">MCPEDL</span>
